@@ -1,9 +1,8 @@
-
 const employees = [
     {
         id: 1,
-        firstName: "Employee1",
-        email: "employee1@example.com",
+        firstName: "Ali",
+        email: "ali@example.com",
         password: "123",
         tasks: [
             {
@@ -40,17 +39,12 @@ const employees = [
                 category: "Backend"
             }
         ],
-        taskSummary: {
-            active: 1,
-            newTask: 1,
-            complete: 1,
-            failed: 1
-        }
+        taskSummary: { active: 1, newTask: 1, complete: 1, failed: 1 }
     },
     {
         id: 2,
-        firstName: "Employee2",
-        email: "employee2@example.com",
+        firstName: "Ahmed",
+        email: "ahmed@example.com",
         password: "123",
         tasks: [
             {
@@ -87,17 +81,12 @@ const employees = [
                 category: "Database"
             }
         ],
-        taskSummary: {
-            active: 1,
-            newTask: 1,
-            complete: 1,
-            failed: 1
-        }
+        taskSummary: { active: 1, newTask: 1, complete: 1, failed: 1 }
     },
     {
         id: 3,
-        firstName: "Employee3",
-        email: "employee3@example.com",
+        firstName: "Bilal",
+        email: "bilal@example.com",
         password: "123",
         tasks: [
             {
@@ -134,17 +123,12 @@ const employees = [
                 category: "DevOps"
             }
         ],
-        taskSummary: {
-            active: 1,
-            newTask: 1,
-            complete: 1,
-            failed: 1
-        }
+        taskSummary: { active: 1, newTask: 1, complete: 1, failed: 1 }
     },
     {
         id: 4,
-        firstName: "Employee4",
-        email: "employee4@example.com",
+        firstName: "Hassan",
+        email: "hassan@example.com",
         password: "123",
         tasks: [
             {
@@ -181,17 +165,12 @@ const employees = [
                 category: "Integration"
             }
         ],
-        taskSummary: {
-            active: 1,
-            newTask: 1,
-            complete: 1,
-            failed: 1
-        }
+        taskSummary: { active: 1, newTask: 1, complete: 1, failed: 1 }
     },
     {
         id: 5,
-        firstName: "Employee5",
-        email: "employee5@example.com",
+        firstName: "Usman",
+        email: "usman@example.com",
         password: "123",
         tasks: [
             {
@@ -228,24 +207,18 @@ const employees = [
                 category: "Security"
             }
         ],
-        taskSummary: {
-            active: 1,
-            newTask: 1,
-            complete: 1,
-            failed: 1
-        }
+        taskSummary: { active: 1, newTask: 1, complete: 1, failed: 1 }
     }
 ];
 
 const admins = [
     {
         id: 1,
-        firstName: "Admin1",
-        email: "admin1@example.com",
+        firstName: "Sana",
+        email: "sana@example.com",
         password: "123"
     }
 ];
-
 
 
 export const setLocalStorage = () => {
