@@ -2,234 +2,220 @@ const employees = [
     {
         id: 1,
         firstName: "Ali",
-        email: "ali@example.com",
+        email: "ali@ex.com",
         password: "123",
+        taskCounts: {
+            active: 2,
+            newTask: 1,
+            completed: 1,
+            failed: 0
+        },
         tasks: [
             {
-                taskNumber: 1,
                 active: true,
                 newTask: true,
-                complete: false,
+                completed: false,
                 failed: false,
-                taskTitle: "Design Login Page",
-                taskDescription: "Create responsive login UI",
-                date: "2026-02-10",
+                taskTitle: "Update website",
+                taskDescription: "Revamp the homepage design",
+                taskDate: "2024-10-12",
                 category: "Design"
             },
             {
-                taskNumber: 2,
                 active: false,
                 newTask: false,
-                complete: true,
+                completed: true,
                 failed: false,
-                taskTitle: "Fix Navbar Bug",
-                taskDescription: "Resolve mobile navbar issue",
-                date: "2026-02-05",
-                category: "Development"
+                taskTitle: "Client meeting",
+                taskDescription: "Discuss project requirements",
+                taskDate: "2024-10-10",
+                category: "Meeting"
             },
             {
-                taskNumber: 3,
-                active: false,
+                active: true,
                 newTask: false,
-                complete: false,
-                failed: true,
-                taskTitle: "API Integration",
-                taskDescription: "Integrate payment API",
-                date: "2026-02-01",
-                category: "Backend"
+                completed: false,
+                failed: false,
+                taskTitle: "Fix bugs",
+                taskDescription: "Resolve bugs reported in issue tracker",
+                taskDate: "2024-10-14",
+                category: "Development"
             }
-        ],
-        taskSummary: { active: 1, newTask: 1, complete: 1, failed: 1 }
+        ]
     },
     {
         id: 2,
         firstName: "Ahmed",
-        email: "ahmed@example.com",
+        email: "ahmed@ex.com",
         password: "123",
+        taskCounts: {
+            active: 1,
+            newTask: 0,
+            completed: 1,
+            failed: 0
+        },
         tasks: [
             {
-                taskNumber: 1,
                 active: true,
-                newTask: true,
-                complete: false,
-                failed: false,
-                taskTitle: "Create Dashboard UI",
-                taskDescription: "Admin dashboard design",
-                date: "2026-02-11",
-                category: "Design"
-            },
-            {
-                taskNumber: 2,
-                active: false,
                 newTask: false,
-                complete: true,
+                completed: false,
                 failed: false,
-                taskTitle: "Update Profile Page",
-                taskDescription: "Add profile image upload",
-                date: "2026-02-07",
-                category: "Frontend"
-            },
-            {
-                taskNumber: 3,
-                active: false,
-                newTask: false,
-                complete: false,
-                failed: true,
-                taskTitle: "Database Backup",
-                taskDescription: "Backup production database",
-                date: "2026-02-03",
+                taskTitle: "Database optimization",
+                taskDescription: "Optimize queries for better performance",
+                taskDate: "2024-10-11",
                 category: "Database"
+            },
+            {
+                active: false,
+                newTask: false,
+                completed: true,
+                failed: false,
+                taskTitle: "Design new feature",
+                taskDescription: "Create mockups for the new feature",
+                taskDate: "2024-10-09",
+                category: "Design"
             }
-        ],
-        taskSummary: { active: 1, newTask: 1, complete: 1, failed: 1 }
+        ]
     },
     {
         id: 3,
         firstName: "Bilal",
-        email: "bilal@example.com",
+        email: "bilal@ex.com",
         password: "123",
+        taskCounts: {
+            active: 2,
+            newTask: 1,
+            completed: 1,
+            failed: 0
+        },
         tasks: [
             {
-                taskNumber: 1,
                 active: true,
                 newTask: true,
-                complete: false,
+                completed: false,
                 failed: false,
-                taskTitle: "Landing Page SEO",
-                taskDescription: "Optimize SEO tags",
-                date: "2026-02-09",
-                category: "Marketing"
+                taskTitle: "Prepare presentation",
+                taskDescription: "Prepare slides for upcoming client presentation",
+                taskDate: "2024-10-13",
+                category: "Presentation"
             },
             {
-                taskNumber: 2,
-                active: false,
+                active: true,
                 newTask: false,
-                complete: true,
+                completed: false,
                 failed: false,
-                taskTitle: "Bug Fixes",
-                taskDescription: "Resolve reported issues",
-                date: "2026-02-04",
+                taskTitle: "Code review",
+                taskDescription: "Review the codebase for optimization",
+                taskDate: "2024-10-12",
                 category: "Development"
             },
             {
-                taskNumber: 3,
                 active: false,
                 newTask: false,
-                complete: false,
-                failed: true,
-                taskTitle: "Server Deployment",
-                taskDescription: "Deploy app to VPS",
-                date: "2026-02-02",
-                category: "DevOps"
+                completed: true,
+                failed: false,
+                taskTitle: "Testing",
+                taskDescription: "Test the latest build for bugs",
+                taskDate: "2024-10-08",
+                category: "QA"
             }
-        ],
-        taskSummary: { active: 1, newTask: 1, complete: 1, failed: 1 }
+        ]
     },
     {
         id: 4,
         firstName: "Hassan",
-        email: "hassan@example.com",
+        email: "hassan@ex.com",
         password: "123",
+        taskCounts: {
+            active: 2,
+            newTask: 1,
+            completed: 0,
+            failed: 0
+        },
         tasks: [
             {
-                taskNumber: 1,
                 active: true,
                 newTask: true,
-                complete: false,
+                completed: false,
                 failed: false,
-                taskTitle: "Create Reports Module",
-                taskDescription: "Generate monthly reports",
-                date: "2026-02-12",
-                category: "Backend"
+                taskTitle: "Write documentation",
+                taskDescription: "Update the project documentation",
+                taskDate: "2024-10-13",
+                category: "Documentation"
             },
             {
-                taskNumber: 2,
-                active: false,
+                active: true,
                 newTask: false,
-                complete: true,
+                completed: false,
                 failed: false,
-                taskTitle: "UI Improvements",
-                taskDescription: "Improve button styles",
-                date: "2026-02-06",
-                category: "Frontend"
-            },
-            {
-                taskNumber: 3,
-                active: false,
-                newTask: false,
-                complete: false,
-                failed: true,
-                taskTitle: "Email Service Setup",
-                taskDescription: "Configure SMTP service",
-                date: "2026-02-01",
-                category: "Integration"
+                taskTitle: "Set up CI/CD",
+                taskDescription: "Implement continuous integration pipeline",
+                taskDate: "2024-10-11",
+                category: "DevOps"
             }
-        ],
-        taskSummary: { active: 1, newTask: 1, complete: 1, failed: 1 }
+        ]
     },
     {
         id: 5,
         firstName: "Usman",
-        email: "usman@example.com",
+        email: "usman@ex.com",
         password: "123",
+        taskCounts: {
+            active: 2,
+            newTask: 1,
+            completed: 1,
+            failed: 0
+        },
         tasks: [
             {
-                taskNumber: 1,
                 active: true,
                 newTask: true,
-                complete: false,
+                completed: false,
                 failed: false,
-                taskTitle: "Test Payment Gateway",
-                taskDescription: "Perform sandbox testing",
-                date: "2026-02-13",
-                category: "Testing"
+                taskTitle: "UI redesign",
+                taskDescription: "Redesign the user interface for better UX",
+                taskDate: "2024-10-14",
+                category: "Design"
             },
             {
-                taskNumber: 2,
                 active: false,
                 newTask: false,
-                complete: true,
+                completed: true,
                 failed: false,
-                taskTitle: "Update Documentation",
-                taskDescription: "Write API documentation",
-                date: "2026-02-08",
-                category: "Documentation"
+                taskTitle: "Deploy new build",
+                taskDescription: "Deploy the latest build to production",
+                taskDate: "2024-10-09",
+                category: "DevOps"
             },
             {
-                taskNumber: 3,
-                active: false,
+                active: true,
                 newTask: false,
-                complete: false,
-                failed: true,
-                taskTitle: "Security Audit",
-                taskDescription: "Check vulnerabilities",
-                date: "2026-02-03",
-                category: "Security"
+                completed: false,
+                failed: false,
+                taskTitle: "Client feedback",
+                taskDescription: "Gather feedback from clients after product launch",
+                taskDate: "2024-10-12",
+                category: "Support"
             }
-        ],
-        taskSummary: { active: 1, newTask: 1, complete: 1, failed: 1 }
-    }
-];
-
-const admins = [
-    {
-        id: 1,
-        firstName: "Sana",
-        email: "sana@example.com",
-        password: "123"
+        ]
     }
 ];
 
 
-export const setLocalStorage = () => {
-    console.log("runnnig..")
-    localStorage.setItem('employees', JSON.stringify(employees))
-    localStorage.setItem('admins', JSON.stringify(admins))
+
+const admin = [{
+    "id": 1,
+    "email": "admin@example.com",
+    "password": "123"
+}];
+
+export const setLocalStorage = ()=>{
+    localStorage.setItem('employees',JSON.stringify(employees))
+    localStorage.setItem('admin',JSON.stringify(admin))
 }
-
-export const getLocalStorage = () => {
+export const getLocalStorage = ()=>{
     const employees = JSON.parse(localStorage.getItem('employees'))
-    const admins = JSON.parse(localStorage.getItem('admins'))
+    const admin = JSON.parse(localStorage.getItem('admin'))
 
-    return {employees,admins}
+    return {employees,admin}
 }

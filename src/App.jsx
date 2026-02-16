@@ -9,7 +9,14 @@ const App = () => {
   const [user, setUser] = useState(null)
   const [loggedInUserData, setLoggedInUserData] = useState(null)
   const authData = useContext(AuthContext)
-    console.log()
+  useEffect(() => {
+    const loggedInUser = localStorage.getItem('loggedInUser')
+    if(loggedInUser){
+      const userData = JSON.parse(loggedInUser)
+      setUser(userData.role)
+      setLoggedInUserData(userData.data)
+    }
+  }, [])
   
   // useEffect(() => {
   //   if(authData){
@@ -31,13 +38,11 @@ const App = () => {
       if(employee){
         setUser('employee')
         setLoggedInUserData(employee)
-        localStorage.setItem('loggedInUser',JSON.stringify({role:'employee'}))
+        localStorage.setItem('loggedInUser',JSON.stringify({role:'employee',data:employee}))
       }
     } else {
       alert("This is invalid credentials!")
     }
-    
-
   }
   
   return (

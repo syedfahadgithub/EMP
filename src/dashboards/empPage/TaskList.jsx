@@ -1,68 +1,31 @@
-import React from 'react'
+import Accepted from '../../taskList/Accepted'
+import Failed from '../../taskList/Failed'
+import Completed from '../../taskList/Completed'
+import NewTask from '../../taskList/NewTask'
 
 const TaskList = ({data}) => {
   return (
     <div id='tasks' className='lowerCardDiv w-full h-78 flex flex-nowrap overflow-x-auto gap-5 items-center p-5 bg-stone-900 mt-3'>
-        <div className='lowerCards w-60 h-68 shrink-0 bg-amber-600 rounded-2xl'>
-          <div className='flex justify-between items-center px-3 py-2'>
-            <h1 className='text-lg font-semibold bg-red-600 text-white w-16 text-center '>High</h1>
-            <h1 className='font-medium'>20 feb 2023</h1>
-          </div>
-          <div className='mt-8'>
-            <h1 className='text-xl font-bold px-2'>Make a youtube video</h1>
-            <p className='text-sm font-medium tracking-tighter p-2 text-white'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit voluptatibus maiores dolorem dolor, modi nemo.</p>
-          </div>
-        </div>
-        <div className='lowerCards w-60 h-68 shrink-0 bg-blue-600 rounded-2xl'>
-          <div className='flex justify-between items-center px-3 py-2'>
-            <h1 className='text-lg font-semibold bg-red-600 text-white w-16 text-center '>High</h1>
-            <h1 className='font-medium'>20 feb 2023</h1>
-          </div>
-          <div className='mt-8'>
-            <h1 className='text-xl font-bold px-2'>Make a youtube video</h1>
-            <p className='text-sm font-medium tracking-tighter p-2 text-white'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit voluptatibus maiores dolorem dolor, modi nemo.</p>
-          </div>
-        </div>
-        <div className='lowerCards w-60 h-68 shrink-0 bg-amber-600 rounded-2xl'>
-          <div className='flex justify-between items-center px-3 py-2'>
-            <h1 className='text-lg font-semibold bg-red-600 text-white w-16 text-center '>High</h1>
-            <h1 className='font-medium'>20 feb 2023</h1>
-          </div>
-          <div className='mt-8'>
-            <h1 className='text-xl font-bold px-2'>Make a youtube video</h1>
-            <p className='text-sm font-medium tracking-tighter p-2 text-white'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit voluptatibus maiores dolorem dolor, modi nemo.</p>
-          </div>
-        </div>
-        <div className='lowerCards w-60 h-68 shrink-0 bg-green-600 rounded-2xl'>
-          <div className='flex justify-between items-center px-3 py-2'>
-            <h1 className='text-lg font-semibold bg-red-600 text-white w-16 text-center '>High</h1>
-            <h1 className='font-medium'>20 feb 2023</h1>
-          </div>
-          <div className='mt-8'>
-            <h1 className='text-xl font-bold px-2'>Make a youtube video</h1>
-            <p className='text-sm font-medium tracking-tighter p-2 text-white'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit voluptatibus maiores dolorem dolor, modi nemo.</p>
-          </div>
-        </div>
-        <div className='lowerCards w-60 h-68 shrink-0 bg-orange-600 rounded-2xl'>
-          <div className='flex justify-between items-center px-3 py-2'>
-            <h1 className='text-lg font-semibold bg-red-600 text-white w-16 text-center '>High</h1>
-            <h1 className='font-medium'>20 feb 2023</h1>
-          </div>
-          <div className='mt-8'>
-            <h1 className='text-xl font-bold px-2'>Make a youtube video</h1>
-            <p className='text-sm font-medium tracking-tighter p-2 text-white'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit voluptatibus maiores dolorem dolor, modi nemo.</p>
-          </div>
-        </div>
-        <div className='lowerCards w-60 h-68 shrink-0 bg-pink-600 rounded-2xl'>
-          <div className='flex justify-between items-center px-3 py-2'>
-            <h1 className='text-lg font-semibold bg-red-600 text-white w-16 text-center '>High</h1>
-            <h1 className='font-medium'>20 feb 2023</h1>
-          </div>
-          <div className='mt-8'>
-            <h1 className='text-xl font-bold px-2'>Make a youtube video</h1>
-            <p className='text-sm font-medium tracking-tighter p-2 text-white'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit voluptatibus maiores dolorem dolor, modi nemo.</p>
-          </div>
-        </div>
+        {data.tasks.map((e,idx)=>{
+          if(e.active){
+            return <Accepted key={idx}/>
+          } 
+          if(e.newTask){
+            return <NewTask key={idx}/>
+          }
+          if(e.completed){
+            return <Completed key={idx}/> 
+          }
+          if(e.failed){
+            return <Failed key={idx}/>
+          }
+        })}
+        
+        
+        {/* <Accepted  data={data}/>
+        <Failed data={data}/>
+        <Completed data={data}/>
+        <NewTask data={data}/> */}
       </div>
   )
 }

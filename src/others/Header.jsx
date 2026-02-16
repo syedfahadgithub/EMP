@@ -1,5 +1,4 @@
-import { useContext } from "react"
-import { AuthContext } from "../context/AuthProvider"
+import { useContext, useState } from "react"
 
 const Header = ({data}) => {
 console.log(data)
