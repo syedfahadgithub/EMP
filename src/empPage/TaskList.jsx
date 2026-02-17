@@ -1,7 +1,7 @@
-import Accepted from '../../taskList/Accepted'
-import Failed from '../../taskList/Failed'
-import Completed from '../../taskList/Completed'
-import NewTask from '../../taskList/NewTask'
+import Accepted from '../taskList/Accepted'
+import Failed from '../taskList/Failed'
+import Completed from '../taskList/Completed'
+import NewTask from '../taskList/NewTask'
 
 const TaskList = ({data}) => {
   return (
@@ -20,12 +20,6 @@ const TaskList = ({data}) => {
             return <Failed key={idx}/>
           }
         })}
-        
-        
-        {/* <Accepted  data={data}/>
-        <Failed data={data}/>
-        <Completed data={data}/>
-        <NewTask data={data}/> */}
       </div>
   )
 }

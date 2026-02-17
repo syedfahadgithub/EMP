@@ -1,12 +1,10 @@
+import Header from "../others/Header"
 
 
 const AdminDashboard = () => {
     return (
         <div className='w-full h-screen px-5 bg-zinc-900'>
-            <div className='p-5 flex items-center justify-between'>
-                <h1 className='text-white text-2xl font-medium'>Hello <br /> <span className='text-3xl font-bold'>Fahad 👋</span></h1>
-                <button className='bg-red-600 text-white outline-none px-3 py-1'>Log Out</button>
-            </div>
+            <Header/>
             <div className='w-full h-1/2 flex items-center justify-between bg-stone-900'>
                 <div className='w-1/2 p-5'>
                     <h1 className='text-lg font-semibold'>Task Title</h1>

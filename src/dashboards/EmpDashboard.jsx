@@ -1,6 +1,6 @@
 import Header from '../others/Header'
-import TaskList from './empPage/TaskList'
-import TaskListNum from './empPage/TaskListNum'
+import TaskList from '../empPage/TaskList'
+import TaskListNum from '../empPage/TaskListNum'
 
 const EmpDashboard = ({data}) => {
   console.log(data)
