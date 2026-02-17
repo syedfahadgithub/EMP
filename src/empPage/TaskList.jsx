@@ -8,16 +8,16 @@ const TaskList = ({data}) => {
     <div id='tasks' className='lowerCardDiv w-full h-78 flex flex-nowrap overflow-x-auto gap-5 items-center p-5 bg-stone-900 mt-3'>
         {data.tasks.map((e,idx)=>{
           if(e.active){
-            return <Accepted key={idx}/>
+            return <Accepted key={idx} data={e}/>
           } 
           if(e.newTask){
-            return <NewTask key={idx}/>
+            return <NewTask key={idx} data={e}/>
           }
           if(e.completed){
-            return <Completed key={idx}/> 
+            return <Completed key={idx} data={e}/> 
           }
           if(e.failed){
-            return <Failed key={idx}/>
+            return <Failed key={idx} data={e}/>
           }
         })}
       </div>
