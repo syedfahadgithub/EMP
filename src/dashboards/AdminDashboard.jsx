@@ -1,10 +1,10 @@
 import Header from "../others/Header"
 
 
-const AdminDashboard = () => {
+const AdminDashboard = ({data}) => {
     return (
         <div className='w-full h-screen px-5 bg-zinc-900'>
-            <Header/>
+            <Header data={data}/>
             <div className='w-full h-1/2 flex items-center justify-between bg-stone-900'>
                 <div className='w-1/2 p-5'>
                     <h1 className='text-lg font-semibold'>Task Title</h1>
