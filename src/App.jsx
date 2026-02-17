@@ -48,7 +48,7 @@ const App = () => {
   return (
     <div>
       {!user ? <LoginPage LoginHandle={LoginHandle} /> : ''}
-      {user == 'admin' ? <AdminDashboard /> : (user == 'employee' ? <EmpDashboard data={loggedInUserData}/> : null)}
+      {user == 'admin' ? <AdminDashboard changeUser={setUser} /> : (user == 'employee' ? <EmpDashboard changeUser={setUser} data={loggedInUserData}/> : null)}
       {/* <AdminDashboard/> */}
       {/* <EmpDashboard/> */}
     </div>
