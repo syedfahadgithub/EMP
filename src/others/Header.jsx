@@ -1,18 +1,9 @@
-// import { useContext, useState } from "react"
-// const [userName, setUserName] = useState('')
-//  localStorage.clear()
-// if(!data){
-//     setUserName('Admin')
-// }
-// else{
-//     setUserName(data.firstName)
-// }
 
 
-const Header = (props) => {
+const Header = ({changeUser}) => {
     const logOutUser = () => {
         localStorage.setItem("loggedInUser", '')
-        props.changeUser('')
+        changeUser('')
     }
     return (
         <div>

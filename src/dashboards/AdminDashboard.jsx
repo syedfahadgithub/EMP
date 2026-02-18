@@ -3,11 +3,11 @@ import CreateTask from "../others/CreateTask"
 import EmpTaskDetails from "../others/EmpTaskDetails"
 
 
-const AdminDashboard = (props) => {
+const AdminDashboard = ({changeUser}) => {
     
     return (
         <div className='w-full h-screen px-5 bg-zinc-900'>
-            <Header changeUser={props.changeUser} />
+            <Header changeUser={changeUser} />
             <CreateTask />
             <div className='w-full h-40 px-5 mt-3 bg-stone-900 '>
             <EmpTaskDetails />
