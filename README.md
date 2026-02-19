@@ -1,12 +1,47 @@
-# React + Vite
+# Employee Management System (EMS) 🚀
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple **React-based Employee Management System** with role-based dashboards for **Admin** and **Employees**.  
+This project allows an admin to assign tasks to employees, and employees can view their tasks on their dashboard. All data is stored in **localStorage**, with login/logout functionality.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features ✨
 
-## Expanding the ESLint configuration
+### Admin Features
+- Login as admin using a valid email and password
+- Assign tasks to employees
+- View task statistics (New, Accepted, Completed, Failed)
+- Logout functionality
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Employee Features
+- Login using email and password
+- View assigned tasks in their dashboard
+- Task details include:
+  - Title
+  - Description
+  - Category
+  - Date
+  - Status (New, Accepted, Completed, Failed)
+- Logout functionality
+
+---
+
+## Project Data
+
+- **Users**: 5 employees preloaded in `localStorage`
+- **User Data Structure**:
+
+```json
+{
+  "firstName": "Ali",
+  "lastName": "Khan",
+  "email": "ali@example.com",
+  "password": "12345",
+  "tasks": [],
+  "taskCounts": {
+    "newTask": 0,
+    "completed": 0,
+    "failed": 0
+  }
+}
+

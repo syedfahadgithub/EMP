@@ -1,9 +1,8 @@
 import React from 'react'
 
 const Accepted = ({data}) => {
-  console.log(data.taskTitle)
   return (
-    <div className='lowerCards w-60 h-68 shrink-0 bg-amber-600 rounded-2xl'>
+    <div className='lowerCards w-60 h-68 shrink-0 bg-orange-400 rounded-2xl'>
           <div className='flex justify-between items-center px-3 py-2'>
             <h1 className='text-lg font-semibold bg-red-600 text-white px-2 text-center '>{data.category}</h1>
             <h1 className='font-medium'>{data.taskDate}</h1>

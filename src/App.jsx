@@ -3,7 +3,6 @@ import LoginPage from './components/LoginPage'
 import AdminDashboard from './dashboards/AdminDashboard'
 import EmpDashboard from './dashboards/EmpDashboard'
 import { AuthContext } from './context/AuthProvider'
-// import { getLocalStorage, setLocalStorage } from './utils/Localstorage'
 
 const App = () => {
   const [user, setUser] = useState(null)
@@ -40,8 +39,7 @@ const App = () => {
     <div>
       {!user ? <LoginPage LoginHandle={LoginHandle} /> : ''}
       {user == 'admin' ? <AdminDashboard changeUser={setUser} /> : (user == 'employee' ? <EmpDashboard changeUser={setUser} data={loggedInUserData}/> : null)}
-      {/* <AdminDashboard/> */}
-      {/* <EmpDashboard/> */}
+   
     </div>
   )
 }

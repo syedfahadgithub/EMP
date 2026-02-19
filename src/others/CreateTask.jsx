@@ -15,25 +15,47 @@ const CreateTask = () => {
     const [newTask, setNewTask] = useState({})
 
     const submitHandler = (event) => {
-        event.preventDefault()
-        setNewTask({ taskTitle, taskDate, description, category, active: false, NewTask: true, Failed: false, Completed: false })
-        const data =  userData
-        userData.forEach((e) => {
-            if (assignTo == e.firstName) {
-                e.tasks.push(newTask)  
-                e.taskCounts.newTask = e.taskCounts.newTask+1       
-            }
-        })
-        setUserData(data)
-        console.log(userData)   
-        // localStorage.setItem('employees',JSON.stringify(data))
+    event.preventDefault()
 
-        setTaskTitle('')
-        setTaskDate('')
-        setDescription('')
-        setCategory('')
-        setAssignTo('')
+    const task = { 
+        taskTitle, 
+        taskDate, 
+        description, 
+        category, 
+        active: false, 
+        newTask: true, 
+        failed: false, 
+        completed: false 
     }
+
+    const updatedData = userData.map((user) => {
+        if (assignTo === user.firstName) {
+            return {
+                ...user,
+                tasks: [...user.tasks, task],
+                taskCounts: {
+                    ...user.taskCounts,
+                    newTask: user.taskCounts.newTask + 1
+                }
+            }
+        }
+        return user
+    })
+console.log(task)
+    setUserData(updatedData)
+
+    // ✅ LocalStorage update
+    localStorage.setItem('employees', JSON.stringify(updatedData))
+
+    console.log(updatedData)
+
+    setTaskTitle('')
+    setTaskDate('')
+    setDescription('')
+    setCategory('')
+    setAssignTo('')
+}
+
 
     return (
         <form onSubmit={submitHandler}>
